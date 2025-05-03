@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda</title>
+    <link rel="stylesheet" href="/Css/main.css">
+
+</head>
+
+<body>
+    <header><button id="debug">debug</button>
+        <a href="/main.html">Home</a>
+        <a href="/pages/productos.html">productos</a>
+        <a href="/pages/carrito.html">carrito</a>
+    </header>
+    <main>
+        <h1 id="hola">Bienvenido a la tienda</h1>
+        <h2 id="ifUser">ingresa tu usuario para mejor experiencia</h2>
+        <button id="iniciar-pop">ingresar</button>
+
+
+        <div class="User-pop" id="User-pop">
+            <h3>iniciar sesion</h3>
+            <input type="text" id="usuario" placeholder="ingresa usuario" />
+            <input type="password" id="contraseña" placeholder="ingresa contraseña" />
+            <button id="iniciar">iniciar sesion</button>
+            <button id="crearU">crear usuario</button>
+            <button id="btnChao">cancelar</button>
+        </div>
+        <div class="Regis-pop" id="Regis-pop">
+            <h3>crear usuario</h3>
+            <p>Nombre</p>
+            <input type="text" id="NombreUser" placeholder="Ingresa ty nombre"/>
+            <p>ingresa tu nombre de usuario</p>
+            <input type="text" id="RUsuario" placeholder="ingresa usuario" />
+            <p>Ingresa tu contraseña (max 8 letras y num)</p>
+            <input type="password" id="RContraseña" placeholder="ingresa contraseña" />
+            <button id="registrar">Registrar</button>
+            <button id="btnChao2">cancelar</button>
+        </div>
+
+        <div>
+            <h2>Productos</h2>
+
+            <button id="productos">ver productos</button>
+        </div>
+
+
+    </main>
+    <footer>
+        <p>gracias por visitarnos</p>
+    </footer>
+    <script src="/javaScript/main.js"></script>
+</body>
+
+</html>
