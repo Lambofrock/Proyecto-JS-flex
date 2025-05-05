@@ -77,7 +77,7 @@ if (ListaUsers === null) {
       localStorage.setItem("lista", JSON.stringify(ListaUsers));
       localStorage.setItem("usuarioGlobal", JSON.stringify(ListaUsers));
       let UsuarioSession = JSON.parse(localStorage.getItem("usuarioGlobal"));
-      console.log(UsuarioSession);
+      // console.log(UsuarioSession);
       //se que no debo guardar la contraseña, pero me da lata encriptar para este demo <3
       console.log("usuario creado correctamente");
       console.log(usuarioN);
@@ -125,18 +125,25 @@ const password = document.getElementById("password");
 const iniciar = document.getElementById("iniciar");
 
 //inicio de sesion primitivo
-iniciar.addEventListener("click", () => { 
+iniciar.addEventListener("click", () => {
+  console.log(ListaUsers);
+
+  const usuarioInicio = ListaUsers.find(
+    (users) => users.usuario.toLowerCase() === ISesion.value.toLowerCase()
+  );
+
+  if (
+    usuarioInicio.usuario.toLowerCase() === ISesion.value.toLowerCase()
+    //  && usuarioInicio.contraseña.toLowerCase()===password.value.toLowerCase()
+    // passwordInicio.contraseña.toLowerCase() === password.value.toLowerCase()
+  ) {
+    hola.innerHTML = ` Bienvenido ${usuarioInicio.nombre}!  `;
+    alert("sesion iniciada correctamente");
+    // console.log("funciona");
+    UPop.classList.remove("open");
+  } else {
+    alert("usuario o contraseña incorrecta");
+
+  }
 
 });
-
-//usuarios registrados
-
-if (ListaUsers){
-  const usuariosMostrar = ListaUsers.map(ListaUsers => ListaUsers.usuario);
-
-  usuariosMostrar.forEach(function(usuariosMostrar) {console.log(usuariosMostrar)
-
-});
-  
-
-}
