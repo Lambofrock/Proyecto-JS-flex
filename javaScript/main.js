@@ -134,7 +134,7 @@ iniciar.addEventListener("click", () => {
 
   if (
     usuarioInicio.usuario.toLowerCase() === ISesion.value.toLowerCase()
-    //  && usuarioInicio.contraseña.toLowerCase()===password.value.toLowerCase()
+     && usuarioInicio.contraseña.toLowerCase()===password.value.toLowerCase()
     // passwordInicio.contraseña.toLowerCase() === password.value.toLowerCase()
   ) {
     hola.innerHTML = ` Bienvenido ${usuarioInicio.nombre}!  `;
