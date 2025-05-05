@@ -1,22 +1,22 @@
-// popup
+// popup-----------------------------------------------------------------------------------------
 const btnIniciarPop = document.getElementById("iniciar-pop");
 const UPop = document.getElementById("User-pop");
 const btnChao = document.getElementById("btnChao");
 const btnChao2 = document.getElementById("btnChao2");
 const btncrearU = document.getElementById("crearU");
 const Rpop = document.getElementById("Regis-pop");
-const debug = document.getElementById("debug")
 
-debug.addEventListener("click", ()=>{
+//boton debug-------------------------------------------------------------------------------------------
+const debug = document.getElementById("debug");
+debug.addEventListener("click", () => {
   UPop.classList.remove("open");
   Rpop.classList.remove("open");
   localStorage.removeItem("usuarioGlobal");
   localStorage.removeItem("lista");
   //para sacar y borrar todo
-})
+});
 
-let ListaUsers =  JSON.parse(localStorage.getItem("lista")) ;
-console.log(ListaUsers)
+let ListaUsers = JSON.parse(localStorage.getItem("lista"));
 const NUsuario = " ";
 
 btnIniciarPop.addEventListener("click", () => {
@@ -38,7 +38,7 @@ btncrearU.addEventListener("click", () => {
   Rpop.classList.add("open");
 });
 
-// Usuario
+// Usuario--------------------------------------------------------------------------------------
 
 class Usuario {
   constructor(nombre, usuario, contraseña) {
@@ -46,79 +46,97 @@ class Usuario {
     this.usuario = usuario;
     this.contraseña = contraseña;
   }
-
-  describir() {
-    return (hola.innerHTML = `Bienvenido ${this.nombre} !`);
-  }
 }
 
 const RUsuario = document.getElementById("RUsuario");
 const RContraseña = document.getElementById("RContraseña");
 const btnRegisU = document.getElementById("registrar");
 const NombreUser = document.getElementById("NombreUser");
-//   const btnniciar = document.getElementById("iniciar")
+const btnniciar = document.getElementById("iniciar");
 
-btnRegisU.addEventListener("click", () => {
-  const usuarioN = new Usuario(
-    NombreUser.value,
-    RUsuario.value,
-    RContraseña.value
-  );
-
-  if (usuarioN.usuario === "") {
-    alert("debe ingresar nombre de usuario");
-  } else if (usuarioN.nombre === "") {
-    alert("debe ingresar nombre");
-  } else if (usuarioN.contraseña === "") {
-    alert("debe ingresar contraseña");
-  } else {
-    usuarioN.describir();
-    ListaUsers.push(usuarioN);
-    //se que no debo guardar la contraseña, pero me da lata encriptar para este demo <3
-
-  }
-  Rpop.classList.remove("open");
-});
-
+//--------------------------------------------------------------------------------------------------------------------------
 //para saber si hay usuario
-// const productos = document.getElementById("productos"); ////////boorar boton
-const iniciar = document.getElementById("iniciar");
-// let listaGuardad = JSON.parse(localStorage.getItem("lista"));
-let UsuarioSession = JSON.parse(localStorage.getItem("usuarioGlobal"));
+if (ListaUsers === null) {
+  ListaUsers = [];
 
+  btnRegisU.addEventListener("click", () => {
+    const usuarioN = new Usuario(
+      NombreUser.value,
+      RUsuario.value,
+      RContraseña.value
+    );
 
-
-if (UsuarioSession === null) {
-  console.log("no hay usuario guardado");
+    if (usuarioN.usuario === "") {
+      alert("debe ingresar nombre de usuario");
+    } else if (usuarioN.nombre === "") {
+      alert("debe ingresar nombre");
+    } else if (usuarioN.contraseña === "") {
+      alert("debe ingresar contraseña");
+    } else {
+      ListaUsers.push(usuarioN);
+      localStorage.setItem("lista", JSON.stringify(ListaUsers));
+      localStorage.setItem("usuarioGlobal", JSON.stringify(ListaUsers));
+      let UsuarioSession = JSON.parse(localStorage.getItem("usuarioGlobal"));
+      console.log(UsuarioSession);
+      //se que no debo guardar la contraseña, pero me da lata encriptar para este demo <3
+      console.log("usuario creado correctamente");
+      console.log(usuarioN);
+      alert("usuario creado correctamente");
+    }
+    Rpop.classList.remove("open");
+  });
+  console.log("lista de usuarios vacia");
 } else {
-  console.log(`usuaruio guardado: ${UsuarioSession.nombre}`);
+  console.log("ya hay usuarios registrados");
+  console.log(ListaUsers);
+  btnRegisU.addEventListener("click", () => {
+    const usuarioN = new Usuario(
+      NombreUser.value,
+      RUsuario.value,
+      RContraseña.value
+    );
+
+    if (usuarioN.usuario === "") {
+      alert("debe ingresar nombre de usuario");
+    } else if (usuarioN.nombre === "") {
+      alert("debe ingresar nombre");
+    } else if (usuarioN.contraseña === "") {
+      alert("debe ingresar contraseña");
+    } else {
+      ListaUsers.push(usuarioN);
+      localStorage.setItem("lista", JSON.stringify(ListaUsers));
+      //se que no debo guardar la contraseña, pero me da lata encriptar para este demo <3 y aun no veo backend
+      console.log("usuario creado correctamente");
+      console.log(usuarioN);
+      alert("usuario creado correctamente");
+    }
+    Rpop.classList.remove("open");
+  });
+  localStorage.setItem("usuarioGlobal", JSON.stringify(ListaUsers));
 }
 
-//iniciar session
+// funciones de orden superior-------------------------------------(no se como integrarlas aun, quizas en los usuarios)
 
-const saludoIndex = () => {
-  if (UsuarioSession.nombre === undefined) {
-    // console.log("no hay usuario");
-  } else hola.innerHTML = `Bienvenido ${UsuarioSession.nombre} !`;
-};
+// filter: Crea un nuevo array con todos los elementos que pasan una prueba definida por la función.
+// para buscar al usuario creado dentro del local storage
 
+const ISesion = document.getElementById("ISesion");
+const password = document.getElementById("password");
+const iniciar = document.getElementById("iniciar");
 
-if (ListaUsers === null){
-  ListaUsers= []
-  productos.addEventListener("click", () => {
-    ListaUsers.push({ nombre: "seba", usuario: "seba3", contraseña: "1234" });
-    localStorage.setItem("lista", JSON.stringify(ListaUsers));
-  console.log("lista de usuarios vacia")
-  
-  });
-  
-}else{
+//inicio de sesion primitivo
+iniciar.addEventListener("click", () => { 
 
-  productos.addEventListener("click", () => {
-    ListaUsers.push({ nombre: "seba", usuario: "seba3", contraseña: "1234" });
-    localStorage.setItem("lista", JSON.stringify(ListaUsers));
-  console.log(ListaUsers)
+});
+
+//usuarios registrados
+
+if (ListaUsers){
+  const usuariosMostrar = ListaUsers.map(ListaUsers => ListaUsers.usuario);
+
+  usuariosMostrar.forEach(function(usuariosMostrar) {console.log(usuariosMostrar)
+
+});
   
-  });
-  
+
 }

@@ -53,3 +53,14 @@
     align-items: center;
     flex-direction: column;
   }
+.todos-productos{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.productos{
+  margin: 50px;
+  border: 1px red solid;
+  width: 500px;
+  height: 100px;
+}
