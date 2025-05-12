@@ -53,14 +53,27 @@
     align-items: center;
     flex-direction: column;
   }
+
 .todos-productos{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+ 
 }
 .productos{
-  margin: 50px;
-  border: 1px red solid;
-  width: 500px;
-  height: 100px;
+margin: 20px;
+}
+.cafe{
+  height: 200px;
+  width: 200px;
+}
+.nombre-productos{
+  display: flex;
+  justify-content: center;
+  margin: 2px;
+  border: 1px black  solid;
+}
+a{
+text-decoration: none;
 }

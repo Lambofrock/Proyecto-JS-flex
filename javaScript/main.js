@@ -147,3 +147,5 @@ iniciar.addEventListener("click", () => {
   }
 
 });
+
+console.log("¡Hola! Bienvenido a la tienda.");
