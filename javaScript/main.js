@@ -149,3 +149,8 @@ iniciar.addEventListener("click", () => {
 });
 
 console.log("¡Hola! Bienvenido a la tienda.");
+// let productos = document.getElementsByClassName("productos");
+// console.log(productos[0].innerHTML); 
+
+
+// async try catch finally inicio de sesion linea 90................................................-----------------------------

@@ -45,14 +45,47 @@ arrayDeCosas.forEach(elemento =>{
     li.textContent= `  ${elemento.fruta} : $${elemento.precio}`;
     mostrar.appendChild(li);
 })
+// let parrafos = document.querySelector('a');
+// parrafos.setAttribute('href', 'http://127.0.0.1:5500/main.html');// borrar, solo practica no funcionara en github!!!!
+
+  // let primerItem = lista.firstChild;
+  // lista.insertBefore(nuevoItem, primerItem);
 
 
-//   const miArray = ["elemento 1", "elemento 2", "elemento 3"];
 
-//   const listaArray = document.getElementById("lista-array");
 
-//   miArray.forEach(elemento => {
-//     const li = document.createElement("li");
-//     li.textContent = elemento;
-//     listaArray.appendChild(li);
-//   });
+//   const productos = [
+//   { nombre: "Arroz", precio: 125 },
+//   { nombre: "Fideos", precio: 70 },
+//   { nombre: "Pan", precio: 50 }
+// ];
+
+// const contenedor = document.getElementById('productos');
+
+// contenedor.innerHTML = `
+//   <h2>Lista de Productos</h2>
+//   <ul>
+//     ${productos.map(producto => `<li>${producto.nombre} - $${producto.precio}</li>`).join('')}
+//   </ul>
+// `;
+
+
+// <a href="#seccion1">Ir a la Sección 1</a>
+// ...
+// <h2 id="seccion1">Sección 1</h2>
+
+// function first() {
+//     console.log("Primera función");
+//     second();
+//     console.log("Primera función - Parte 2");
+// }
+
+// function second() {
+//     console.log("Segunda función");
+// }
+
+// first();
+
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(json => console.log(json))
