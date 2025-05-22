@@ -153,4 +153,4 @@ console.log("¡Hola! Bienvenido a la tienda.");
 // console.log(productos[0].innerHTML); 
 
 
-// async try catch finally inicio de sesion linea 90................................................-----------------------------
+// ciclos fetch async try catch finally inicio de sesion linea 90................................................-----------------------------
