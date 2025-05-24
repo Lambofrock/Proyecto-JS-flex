@@ -1,91 +1,77 @@
-const buscador = document.getElementById("buscador");
-const mostrar = document.getElementById("mostrar");
-const btnResultado = document.getElementById("btnResultado");
+const checkboxes = document.querySelectorAll(".check");
+const contador = document.getElementById("contador");
+const productor = document.getElementById("productor");
 
-const arrayDeCosas = [
-  {
-    fruta: "manzana",
-    cantidad: 5,
-    precio: 500,
-  },
-  {
-    fruta: "pera",
-    cantidad: 10,
-    precio: 450,
-  },
-  {
-    fruta: "sandia",
-    cantidad: 3,
-    precio: 1500,
-  },
-  {
-    fruta: "naranja",
-    cantidad: 12,
-    precio: 1000,
-  },
-  {
-    fruta: "melon",
-    cantidad: 20,
-    precio: 200,
-  },
-];
+let cartItemCount = 0;
 
+const productosElement = [];
 
+const filtersContainer = document.getElementById("filtersContainer");
+filtersContainer.addEventListener("change", filterProducts);
 
-btnResultado.addEventListener("click", () => {
-  const buscarFruta = arrayDeCosas.find(function (frutiwi) {
-    return frutiwi.fruta === buscador.value;
+let productosData = [];
+
+fetch("../database.json")
+  .then((res) => res.json())
+  .then((res) => {
+    productosData = res; 
+    res.forEach((producto) => {
+      const creadorElementos = creadorProducto(producto);
+      productosElement.push(creadorElementos);
+      productor.appendChild(creadorElementos);
+    });
   });
-  console.log(buscarFruta)
-resultado.textContent = `producto con +IVA (20%) =  ${buscarFruta.fruta} ${buscarFruta.precio*1.20}`
-});
 
-arrayDeCosas.forEach(elemento =>{
-    const li = document.createElement("li");
-    li.textContent= `  ${elemento.fruta} : $${elemento.precio}`;
-    mostrar.appendChild(li);
-})
-// let parrafos = document.querySelector('a');
-// parrafos.setAttribute('href', 'http://127.0.0.1:5500/main.html');// borrar, solo practica no funcionara en github!!!!
+function creadorProducto(producto) {
+  const creadorElementos = document.createElement("div");
+  creadorElementos.innerHTML = `<div class="caja-prod">
+  <img class="img-prod" src="../img/cafe.jpg" alt="">
+  <button class="btn-prod">agregar al carrito</button>
+  <p class="text-prod">${producto.descripcion}<br>
+  $ ${producto.precio.toLocaleString()}</p>
+  </div>
+  `;
+  creadorElementos
+    .querySelector(".btn-prod")
+    .addEventListener("click", updateCart);
+  return creadorElementos;
+}
+function updateCart(e) {
+  const statusEl = e.target;
+//-----------------------------------------------------------------------------carrito
+  if (statusEl.classList.contains("added")) {
+    // Remove from cart
+    statusEl.classList.remove("added");
+    statusEl.innerText = "Agregar al carrito";
 
-  // let primerItem = lista.firstChild;
-  // lista.insertBefore(nuevoItem, primerItem);
+    cartItemCount--;
+  } else {
+    // Add to cart
+    statusEl.classList.add("added");
+    statusEl.innerText = "Quitar del carrito";
+
+    cartItemCount++;
+  }
+
+  cartCount.innerText = cartItemCount.toString();
+}
+//-----------------------------------------------------------------------------
+function filterProducts() {
+  const checkedCategories = Array.from(checkboxes)
+    .filter((check) => check.checked)
+    .map((check) => check.id);
+  productosElement.forEach((productosElement, index) => {
+    const product = productosData[index]; 
+    const isInCheckedCategory =
+      checkedCategories.length === 0 ||
+      checkedCategories.includes(product.categoria);
+    if (isInCheckedCategory) {
+      productosElement.classList.remove("ocultar");
+    } else {
+      productosElement.classList.add("ocultar");
+    }
 
 
-
-
-//   const productos = [
-//   { nombre: "Arroz", precio: 125 },
-//   { nombre: "Fideos", precio: 70 },
-//   { nombre: "Pan", precio: 50 }
-// ];
-
-// const contenedor = document.getElementById('productos');
-
-// contenedor.innerHTML = `
-//   <h2>Lista de Productos</h2>
-//   <ul>
-//     ${productos.map(producto => `<li>${producto.nombre} - $${producto.precio}</li>`).join('')}
-//   </ul>
-// `;
-
-
-// <a href="#seccion1">Ir a la Sección 1</a>
-// ...
-// <h2 id="seccion1">Sección 1</h2>
-
-// function first() {
-//     console.log("Primera función");
-//     second();
-//     console.log("Primera función - Parte 2");
-// }
-
-// function second() {
-//     console.log("Segunda función");
-// }
-
-// first();
-
-fetch('https://jsonplaceholder.typicode.com/todos/1')
-      .then(response => response.json())
-      .then(json => console.log(json))
+  
+  });
+}

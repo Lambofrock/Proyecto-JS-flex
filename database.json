@@ -1,0 +1,243 @@
+[
+  {
+    "nombre": "celular",
+    "categoria": "celular",
+    "cantidad": 5,
+    "precio": 290000,
+    "descripcion": "celular estandar",
+    "id": 1
+  },
+  {
+    "nombre": "celular",
+    "categoria": "celular",
+    "cantidad": 3,
+    "precio": 1000000,
+    "descripcion": "celular con estilo",
+    "id": 2
+  },
+  {
+    "nombre": "celular",
+    "categoria": "celular",
+    "cantidad": 6,
+    "precio": 500000,
+    "descripcion": "celular de excelente calidad",
+    "id": 3
+  },
+  {
+    "nombre": "celular",
+    "categoria": "celular",
+    "cantidad": 5,
+    "precio": 300000,
+    "descripcion": "celular con buena bateria",
+    "id": 4
+  },
+  {
+    "nombre": "celular",
+    "categoria": "celular",
+    "cantidad": 5,
+    "precio": 245000,
+    "descripcion": "celular economico",
+    "id": 5
+  },
+  {
+    "nombre": "planta",
+    "categoria": "planta",
+    "cantidad": 5,
+    "precio": 7000,
+    "descripcion": "planta indoor",
+    "id": 6
+  },
+  {
+    "nombre": "planta",
+    "categoria": "planta",
+    "cantidad": 5,
+    "precio": 10500,
+    "descripcion": "planta con colores vivos",
+    "id": 7
+  },
+  {
+    "nombre": "planta",
+    "categoria": "planta",
+    "cantidad": 5,
+    "precio": 5500,
+    "descripcion": "planta espanta ratones",
+    "id": 8
+  },
+  {
+    "nombre": "planta",
+    "categoria": "planta",
+    "cantidad": 5,
+    "precio": 3000,
+    "descripcion": "planta carnivora",
+    "id": 9
+  },
+  {
+    "nombre": "planta",
+    "categoria": "planta",
+    "cantidad": 5,
+    "precio": 500,
+    "descripcion": "planta media muerta",
+    "id": 10
+  },
+  {
+    "nombre": "cafe",
+    "categoria": "cafe",
+    "cantidad": 5,
+    "precio": 6990,
+    "descripcion": "cafe economico",
+    "id": 11
+  },
+  {
+    "nombre": "cafe",
+    "categoria": "cafe",
+    "cantidad": 5,
+    "precio": 15000,
+    "descripcion": "icafe ",
+    "id": 12
+  },
+  {
+    "nombre": "cafe",
+    "categoria": "cafe",
+    "cantidad": 5,
+    "precio": 8500,
+    "descripcion": "cafe de colombia",
+    "id": 13
+  },
+  {
+    "nombre": "cafe",
+    "categoria": "cafe",
+    "cantidad": 5,
+    "precio": 12500,
+    "descripcion": "cafe de colombia pero mas colombiano",
+    "id": 14
+  },
+  {
+    "nombre": "cafe",
+    "categoria": "cafe",
+    "cantidad": 5,
+    "precio": 9500,
+    "descripcion": "cafe de grano bien molido",
+    "id": 15
+  },
+  {
+    "nombre": "Juego de mesa",
+    "categoria": "mesa",
+    "cantidad": 5,
+    "precio": 35500,
+    "descripcion": "piratas de mar muerto",
+    "id": 16
+  },
+  {
+    "nombre": "Juego de mesa",
+    "categoria": "mesa",
+    "cantidad": 5,
+    "precio": 53500,
+    "descripcion": "gatitos en apuros",
+    "id": 17
+  },
+  {
+    "nombre": "Juego de mesa",
+    "categoria": "mesa",
+    "cantidad": 5,
+    "precio": 45000,
+    "descripcion": "colonizadores de lugares ya colonizados",
+    "id": 18
+  },
+  {
+    "nombre": "Juego de mesa",
+    "categoria": "mesa",
+    "cantidad": 5,
+    "precio": 35000,
+    "descripcion": "javier porter y los libros clonados",
+    "id": 19
+  },
+  {
+    "nombre": "Juego de mesa",
+    "categoria": "mesa",
+    "cantidad": 5,
+    "precio": 40000,
+    "descripcion": "son frutas?",
+    "id": 20
+  },
+  {
+    "nombre": "polera",
+    "categoria": "polera",
+    "cantidad": 5,
+    "precio": 20000,
+    "descripcion": "polera chula",
+    "id": 21
+  },
+  {
+    "nombre": "polera",
+    "categoria": "polera",
+    "cantidad": 5,
+    "precio": 15000,
+    "descripcion": "polera bonita",
+    "id": 22
+  },
+  {
+    "nombre": "polera",
+    "categoria": "polera",
+    "cantidad": 5,
+    "precio": 10000,
+    "descripcion": "polera?",
+    "id": 23
+  },
+  {
+    "nombre": "polera",
+    "categoria": "polera",
+    "cantidad": 5,
+    "precio": 24000,
+    "descripcion": "polera de ejercicio",
+    "id": 24
+  },
+  {
+    "nombre": "polera",
+    "categoria": "polera",
+    "cantidad": 5,
+    "precio": 15000,
+    "descripcion": "polera para el frio",
+    "id": 25
+  },
+  {
+    "nombre": "vela",
+    "categoria": "vela",
+    "cantidad": 5,
+    "precio": 10000,
+    "descripcion": "vela aromatica olor mar",
+    "id": 26
+  },
+  {
+    "nombre": "vela",
+    "categoria": "vela",
+    "cantidad": 5,
+    "precio": 6990,
+    "descripcion": "vela con 5000 lumens",
+    "id": 27
+  },
+  {
+    "nombre": "vela",
+    "categoria": "vela",
+    "cantidad": 5,
+    "precio": 6700,
+    "descripcion": "vela de larga duracion",
+    "id": 28,
+    "img": "link imganen---------------------------------------------"
+  },
+  {
+    "nombre": "vela",
+    "categoria": "vela",
+    "cantidad": 5,
+    "precio": 5500,
+    "descripcion": "vela color extraño",
+    "id": 29
+  },
+  {
+    "nombre": "vela",
+    "categoria": "vela",
+    "cantidad": 5,
+    "precio": 5000,
+    "descripcion": "vela olor hamburguesa",
+    "id": 30
+  }
+]

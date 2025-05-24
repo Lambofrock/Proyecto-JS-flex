@@ -1,80 +1,142 @@
-.User-pop{
-    background-color: rgb(210, 210, 210);
+.User-pop {
+  background-color: rgb(210, 210, 210);
 
-    width: 500px;
-    height: 300px;
-    border: 3px solid black;
-    border-radius: 5px;
-  
+  width: 500px;
+  height: 300px;
+  border: 3px solid black;
+  border-radius: 5px;
 
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    top: 30%;
-    left: 30%;
-    opacity: 0;
-    z-index: -1;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 30%;
+  left: 30%;
+  opacity: 0;
+  z-index: -1;
 }
-.Regis-pop{
-    background-color: rgb(210, 210, 210);
+.Regis-pop {
+  background-color: rgb(210, 210, 210);
 
-    width: 500px;
-    height: 400px;
-    border: 3px solid black;
-    border-radius: 5px;
-  
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    top: 30%;
-    left: 30%;
-    opacity: 0;
-    z-index: -1;
+  width: 500px;
+  height: 400px;
+  border: 3px solid black;
+  border-radius: 5px;
 
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 30%;
+  left: 30%;
+  opacity: 0;
+  z-index: -1;
 }
 .open {
-    opacity: 1;
-    z-index: 999;
-  }
+  opacity: 1;
+  z-index: 999;
+}
 .r-pop-up.open {
-    opacity: 1;
-    z-index: 999;
-  }
+  opacity: 1;
+  z-index: 999;
+}
 
 .chao {
-    position: absolute;
-    bottom: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
+  position: absolute;
+  bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
-.todos-productos{
+.todos-productos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-
- 
 }
-.productos{
-margin: 20px;
+.productos {
+  margin: 20px;
+}
+.productor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.img-prod {
+  height: 200px;
+  width: 200px;  
+  border-top-left-radius:10px ;
+  border-top-right-radius: 10px;
+}
+.text-prod {
+  display: flex;
+  justify-content: center;
+  margin: 1px;
+
+  padding: 5px;
+}
+.caja-prod {
+  height: 290px;
+  width: 200px;
+  position: relative;
+  margin: 10px;
+  margin-bottom:auto;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+.btn-prod {
+  position: absolute;
+  color: whitesmoke;
+  background-color: black;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 6px;
+  border: none;
+  cursor: pointer;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.btn-prod:hover {
+  background-color: rgb(53, 100, 138);
 }
 .cafe{
   height: 200px;
   width: 200px;
 }
-.nombre-productos{
+.nombre-productos {
   display: flex;
   justify-content: center;
   margin: 2px;
-  border: 1px black  solid;
+  border: 1px black solid;
 }
-a{
-text-decoration: none;
+a {
+  text-decoration: none;
+}
+.hide {
+  opacity: 0;
+  z-index: -1;
+}
+.checkbox{
+  
+    display: flex;
+    justify-self: center;
+  justify-content: center;
+  border: 1px solid black;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 7px;
+}
+.center{
+  display: flex;
+  justify-self: center;
+}
+.ocultar{
+  display: none;
 }
