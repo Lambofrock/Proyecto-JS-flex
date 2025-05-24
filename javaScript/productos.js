@@ -1,48 +1,77 @@
-const buscador = document.getElementById("buscador");
-const mostrar = document.getElementById("mostrar");
-const btnResultado = document.getElementById("btnResultado");
+const checkboxes = document.querySelectorAll(".check");
+const contador = document.getElementById("contador");
+const productor = document.getElementById("productor");
 
-// const arrayDeCosas = [
-//   {
-//     fruta: "manzana",
-//     cantidad: 5,
-//     precio: 500,
-//   },
-//   {
-//     fruta: "pera",
-//     cantidad: 10,
-//     precio: 450,
-//   },
-//   {
-//     fruta: "sandia",
-//     cantidad: 3,
-//     precio: 1500,
-//   },
-//   {
-//     fruta: "naranja",
-//     cantidad: 12,
-//     precio: 1000,
-//   },
-//   {
-//     fruta: "melon",
-//     cantidad: 20,
-//     precio: 200,
-//   },
-// ];
+let cartItemCount = 0;
+
+const productosElement = [];
+
+const filtersContainer = document.getElementById("filtersContainer");
+filtersContainer.addEventListener("change", filterProducts);
+
+let productosData = [];
+
+fetch("../database.json")
+  .then((res) => res.json())
+  .then((res) => {
+    productosData = res; 
+    res.forEach((producto) => {
+      const creadorElementos = creadorProducto(producto);
+      productosElement.push(creadorElementos);
+      productor.appendChild(creadorElementos);
+    });
+  });
+
+function creadorProducto(producto) {
+  const creadorElementos = document.createElement("div");
+  creadorElementos.innerHTML = `<div class="caja-prod">
+  <img class="img-prod" src="../img/cafe.jpg" alt="">
+  <button class="btn-prod">agregar al carrito</button>
+  <p class="text-prod">${producto.descripcion}<br>
+  $ ${producto.precio.toLocaleString()}</p>
+  </div>
+  `;
+  creadorElementos
+    .querySelector(".btn-prod")
+    .addEventListener("click", updateCart);
+  return creadorElementos;
+}
+function updateCart(e) {
+  const statusEl = e.target;
+//-----------------------------------------------------------------------------carrito
+  if (statusEl.classList.contains("added")) {
+    // Remove from cart
+    statusEl.classList.remove("added");
+    statusEl.innerText = "Agregar al carrito";
+
+    cartItemCount--;
+  } else {
+    // Add to cart
+    statusEl.classList.add("added");
+    statusEl.innerText = "Quitar del carrito";
+
+    cartItemCount++;
+  }
+
+  cartCount.innerText = cartItemCount.toString();
+}
+//-----------------------------------------------------------------------------
+function filterProducts() {
+  const checkedCategories = Array.from(checkboxes)
+    .filter((check) => check.checked)
+    .map((check) => check.id);
+  productosElement.forEach((productosElement, index) => {
+    const product = productosData[index]; 
+    const isInCheckedCategory =
+      checkedCategories.length === 0 ||
+      checkedCategories.includes(product.categoria);
+    if (isInCheckedCategory) {
+      productosElement.classList.remove("ocultar");
+    } else {
+      productosElement.classList.add("ocultar");
+    }
 
 
-
-// btnResultado.addEventListener("click", () => {
-//   const buscarFruta = arrayDeCosas.find(function (frutiwi) {
-//     return frutiwi.fruta === buscador.value;
-//   });
-//   console.log(buscarFruta)
-// resultado.textContent = `producto con +IVA (20%) =  ${buscarFruta.fruta} ${buscarFruta.precio*1.20}`
-// });
-
-// arrayDeCosas.forEach(elemento =>{
-//     const li = document.createElement("li");
-//     li.textContent= `  ${elemento.fruta} : $${elemento.precio}`;
-//     mostrar.appendChild(li);
-// })
-
+  
+  });
+}

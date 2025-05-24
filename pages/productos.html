@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>productos</title>
+  <link rel="stylesheet" href="../Css/main.css">
 </head>
 
 <body>
@@ -12,27 +13,55 @@
     <a href="../main.html">Home</a>
     <a href="productos.html">productos</a>
     <a href="carrito.html">carrito</a>
+     <span class="relative text-center">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        #
+        height="24"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path
+          d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z"
+        />
+        <path d="M9 11v-5a3 3 0 0 1 6 0v5" />
+      </svg>
+      <small
+        id="cartCount"
+        class="bg-red-500 text-xs text-white w-4 h-4 absolute -top-2 -right-2 rounded-full"
+        >0</small
+      >
+    </span>
   </header>
   <main>
-    <!-- <div>
-      <ul id="mostrar"></ul>
-      <input type="text" id="buscador" placeholder="buscar fruta" />
-      <button id="btnResultado">buscar</button>
-      <p id="resultado">producto con +IVA (20%) = </p>
-    </div> -->
-<div>
-  <h2>Todos los productos</h2>
-  <button id="btnMesa">juegos de mesa</button>
-  <button id="btnCelu">celuñlares</button>
-  <button id="btnPlant">plantas</button>
-  <button id="btnCafe">cafe</button>
-  <button id="btnVela">velas</button>
-  <button id="btnPol">poleras</button>
+    <div>
+      <h2 class="center">Todos los productos</h2>
+<div class="checkbox " id="filtersContainer">   
+   <input type="checkbox" class="check" id="mesa"> <label for="mesa">juegos de mesa</label>
+      <input type="checkbox" class="check" id="celular"> <label for="celu">Celulares</label>
+      <input type="checkbox" class="check" id="planta"> <label for="planta">Plantas</label>
+      <input type="checkbox" class="check" id="cafe"> <label for="cafe">Cafe de grano</label>
+      <input type="checkbox" class="check" id="vela"> <label for="velas">Velas</label>
+      <input type="checkbox" class="check" id="polera"> <label for="poleras">Poleras</label> </label>
 </div>
+  
+    </div>
+
+    <div>
+      <div>
+        <div id="productor" class="productor">
+        </div>
+        <!-- <button id="btnProductos"> <a href="./pages/productos.html">ver productos</a></button> -->
+      </div>
+    </div>
   </main>
-  <footer>
-    <p>gracias por visitarnos</p>
-  </footer>
+
   <script src="/javaScript/productos.js"></script>
 </body>
 
