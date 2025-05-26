@@ -1,30 +1,33 @@
 const checkboxes = document.querySelectorAll(".check");
 const contador = document.getElementById("contador");
 const productor = document.getElementById("productor");
-
-let cartItemCount = 0;
-
-const productosElement = [];
-
 const filtersContainer = document.getElementById("filtersContainer");
 filtersContainer.addEventListener("change", filterProducts);
-
+const productosElement = [];
 let productosData = [];
+let cartItemCount = 0;
 
-fetch("/database.json")
-  .then((res) => res.json())
-  .then((res) => {
-    productosData = res;
-    res.forEach((producto) => {
-      const creadorElementos = creadorProducto(producto);
-      productosElement.push(creadorElementos);
-      productor.appendChild(creadorElementos);
-    });
-  })
-  .catch((error) => console.error("No se encontro base de datos", error))
-  .finally(() => {
-    console.log("Promesa finalizada, espero q exitosamente.");
-  });
+const x = fetch ("./database.json")
+
+x.then((res)=>res.json())
+  .then((res) => {console.log(res)})
+
+
+// const database = fetch("./database.json")
+//   database.then((res) => res.json())
+//   .then((res) => {
+//     productosData = res;
+//     res.forEach((producto) => {
+//       const creadorElementos = creadorProducto(producto);
+//       productosElement.push(creadorElementos);
+//       productor.appendChild(creadorElementos);
+//     });
+//   })
+//   .catch((error) => console.error("No se encontro base de datos", error))
+//   .finally(() => {
+//     console.log("Promesa finalizada, espero q exitosamente.");
+//   });
+
 
 function creadorProducto(producto) {
   const creadorElementos = document.createElement("div");
@@ -33,16 +36,15 @@ function creadorProducto(producto) {
   <button class="btn-prod">agregar al carrito</button>
   <p class="text-prod">${producto.descripcion}<br>
   $ ${producto.precio.toLocaleString()}</p>
-  </div>
-  `;
+  </div>`;
   creadorElementos
     .querySelector(".btn-prod")
     .addEventListener("click", updateCart);
   return creadorElementos;
 }
+//-----------------------------------------------------------------------------carrito
 function updateCart(e) {
   const statusEl = e.target;
-  //-----------------------------------------------------------------------------carrito
   if (statusEl.classList.contains("añadir")) {
     statusEl.classList.remove("añadir");
     statusEl.innerText = "Agregar al carrito";
@@ -57,7 +59,6 @@ function updateCart(e) {
 
   cartCount.innerText = cartItemCount.toString();
 }
-//-----------------------------------------------------------------------------
 function filterProducts() {
   const checkedCategories = Array.from(checkboxes)
     .filter((check) => check.checked)
@@ -74,3 +75,5 @@ function filterProducts() {
     }
   });
 }
+
+
