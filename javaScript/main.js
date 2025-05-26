@@ -9,6 +9,10 @@ const Rpop = document.getElementById("Regis-pop");
 //boton debug-------------------------------------------------------------------------------------------
 const debug = document.getElementById("debug");
 debug.addEventListener("click", () => {
+  Toastify({
+    text: "borrado el cache",
+    duration: 3000,
+  }).showToast();
   UPop.classList.remove("open");
   Rpop.classList.remove("open");
   localStorage.removeItem("usuarioGlobal");
@@ -67,11 +71,20 @@ if (ListaUsers === null) {
     );
 
     if (usuarioN.usuario === "") {
-      alert("debe ingresar nombre de usuario");
+      Swal.fire({
+        icon: "error",
+        title: "debe ingresar un nombre",
+      });
     } else if (usuarioN.nombre === "") {
-      alert("debe ingresar nombre");
+      Swal.fire({
+        icon: "error",
+        title: "debe ingresar nombre de usuario",
+      });
     } else if (usuarioN.contraseña === "") {
-      alert("debe ingresar contraseña");
+      Swal.fire({
+        icon: "error",
+        title: "contraseña",
+      });
     } else {
       ListaUsers.push(usuarioN);
       localStorage.setItem("lista", JSON.stringify(ListaUsers));
@@ -79,16 +92,19 @@ if (ListaUsers === null) {
       let UsuarioSession = JSON.parse(localStorage.getItem("usuarioGlobal"));
       // console.log(UsuarioSession);
       //se que no debo guardar la contraseña, pero me da lata encriptar para este demo <3
-      console.log("usuario creado correctamente");
-      console.log(usuarioN);
-      alert("usuario creado correctamente");
+      // console.log("usuario creado correctamente");
+      // console.log(usuarioN);
+      Swal.fire({
+        title: "inicio correcto",
+        icon: "success",
+      });
     }
     Rpop.classList.remove("open");
   });
-  console.log("lista de usuarios vacia");
+  // console.log("lista de usuarios vacia");
 } else {
-  console.log("ya hay usuarios registrados");
-  console.log(ListaUsers);
+  // console.log("ya hay usuarios registrados");
+  // console.log(ListaUsers);
   btnRegisU.addEventListener("click", () => {
     const usuarioN = new Usuario(
       NombreUser.value,
@@ -97,18 +113,30 @@ if (ListaUsers === null) {
     );
 
     if (usuarioN.usuario === "") {
-      alert("debe ingresar nombre de usuario");
+      Swal.fire({
+        icon: "error",
+        title: "debe ingresar nombre",
+      });
     } else if (usuarioN.nombre === "") {
-      alert("debe ingresar nombre");
+      Swal.fire({
+        icon: "error",
+        title: "debe ingresar nombre de usuario",
+      });
     } else if (usuarioN.contraseña === "") {
-      alert("debe ingresar contraseña");
+      Swal.fire({
+        icon: "error",
+        title: "debe ingresar contraseña",
+      });
     } else {
       ListaUsers.push(usuarioN);
       localStorage.setItem("lista", JSON.stringify(ListaUsers));
       //se que no debo guardar la contraseña, pero me da lata encriptar para este demo <3 y aun no veo backend
-      console.log("usuario creado correctamente");
-      console.log(usuarioN);
-      alert("usuario creado correctamente");
+      // console.log("usuario creado correctamente");
+      // console.log(usuarioN);
+      Swal.fire({
+        title: "usuario creado correctamente",
+        icon: "success",
+      });
     }
     Rpop.classList.remove("open");
   });
@@ -126,31 +154,42 @@ const iniciar = document.getElementById("iniciar");
 
 //inicio de sesion primitivo
 iniciar.addEventListener("click", () => {
-  console.log(ListaUsers);
+  // console.log(ListaUsers);
 
   const usuarioInicio = ListaUsers.find(
     (users) => users.usuario.toLowerCase() === ISesion.value.toLowerCase()
   );
 
   if (
-    usuarioInicio.usuario.toLowerCase() === ISesion.value.toLowerCase()
-     && usuarioInicio.contraseña.toLowerCase()===password.value.toLowerCase()
+    usuarioInicio.usuario.toLowerCase() === ISesion.value.toLowerCase() &&
+    usuarioInicio.contraseña.toLowerCase() === password.value.toLowerCase()
     // passwordInicio.contraseña.toLowerCase() === password.value.toLowerCase()
   ) {
     hola.innerHTML = ` Bienvenido ${usuarioInicio.nombre}!  `;
-    alert("sesion iniciada correctamente");
+    Swal.fire({
+      title: "inicio correcto",
+      icon: "success",
+    });
     // console.log("funciona");
     UPop.classList.remove("open");
   } else {
-    alert("usuario o contraseña incorrecta");
-
+    Swal.fire({
+      title: "usuario o contraseña incorrecta",
+      icon: "error",
+    });
   }
-
 });
 
-console.log("¡Hola! Bienvenido a la tienda.");
-// let productos = document.getElementsByClassName("productos");
-// console.log(productos[0].innerHTML); 
+setTimeout(() => {
+    Toastify({
+  style: {
+    background: "red",
+  },
+  onClick:function (){
+UPop.classList.add("open")
+  },
+text: "Ingresa tu usuario para mejor experiencia",
+duration: 4000
 
-
-// ciclos fetch async try catch finally inicio de sesion linea 90................................................-----------------------------
+}).showToast();
+}, 2000);

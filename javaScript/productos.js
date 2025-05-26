@@ -11,21 +11,25 @@ filtersContainer.addEventListener("change", filterProducts);
 
 let productosData = [];
 
-fetch("../database.json")
+fetch("/database.json")
   .then((res) => res.json())
   .then((res) => {
-    productosData = res; 
+    productosData = res;
     res.forEach((producto) => {
       const creadorElementos = creadorProducto(producto);
       productosElement.push(creadorElementos);
       productor.appendChild(creadorElementos);
     });
+  })
+  .catch((error) => console.error("No se encontro base de datos", error))
+  .finally(() => {
+    console.log("Promesa finalizada, espero q exitosamente.");
   });
 
 function creadorProducto(producto) {
   const creadorElementos = document.createElement("div");
   creadorElementos.innerHTML = `<div class="caja-prod">
-  <img class="img-prod" src="../img/cafe.jpg" alt="">
+  <img class="img-prod" src="${producto.img}" alt="">
   <button class="btn-prod">agregar al carrito</button>
   <p class="text-prod">${producto.descripcion}<br>
   $ ${producto.precio.toLocaleString()}</p>
@@ -38,16 +42,14 @@ function creadorProducto(producto) {
 }
 function updateCart(e) {
   const statusEl = e.target;
-//-----------------------------------------------------------------------------carrito
-  if (statusEl.classList.contains("added")) {
-    // Remove from cart
-    statusEl.classList.remove("added");
+  //-----------------------------------------------------------------------------carrito
+  if (statusEl.classList.contains("añadir")) {
+    statusEl.classList.remove("añadir");
     statusEl.innerText = "Agregar al carrito";
 
     cartItemCount--;
   } else {
-    // Add to cart
-    statusEl.classList.add("added");
+    statusEl.classList.add("añadir");
     statusEl.innerText = "Quitar del carrito";
 
     cartItemCount++;
@@ -61,7 +63,7 @@ function filterProducts() {
     .filter((check) => check.checked)
     .map((check) => check.id);
   productosElement.forEach((productosElement, index) => {
-    const product = productosData[index]; 
+    const product = productosData[index];
     const isInCheckedCategory =
       checkedCategories.length === 0 ||
       checkedCategories.includes(product.categoria);
@@ -70,8 +72,5 @@ function filterProducts() {
     } else {
       productosElement.classList.add("ocultar");
     }
-
-
-  
   });
 }
