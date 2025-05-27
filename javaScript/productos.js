@@ -3,30 +3,46 @@ const contador = document.getElementById("contador");
 const productor = document.getElementById("productor");
 const filtersContainer = document.getElementById("filtersContainer");
 filtersContainer.addEventListener("change", filterProducts);
-const productosElement = [];
+const productosElementos = [];
 let productosData = [];
 let cartItemCount = 0;
 
-const x = fetch ("./database.json")
+const x = fetch('./database.json');
 
-x.then((res)=>res.json())
-  .then((res) => {console.log(res)})
+x.then((res) => res.json())
+  .then((res) => {
+    console.log(res + "x");
+  })
+  .catch((error) => console.error("No se encontro base de datos", error));
+const c = fetch('../database.json');
 
+x.then((res) => res.json())
+  .then((res) => {
+    console.log(res+ "c");
+  })
+  .catch((error) => console.error("No se encontro base de datos", error));
+const z = fetch('../database.json');
 
-// const database = fetch("./database.json")
-//   database.then((res) => res.json())
-//   .then((res) => {
-//     productosData = res;
-//     res.forEach((producto) => {
-//       const creadorElementos = creadorProducto(producto);
-//       productosElement.push(creadorElementos);
-//       productor.appendChild(creadorElementos);
-//     });
-//   })
-//   .catch((error) => console.error("No se encontro base de datos", error))
-//   .finally(() => {
-//     console.log("Promesa finalizada, espero q exitosamente.");
-//   });
+x.then((res) => res.json())
+  .then((res) => {
+    console.log(res+"z");
+  })
+  .catch((error) => console.error("No se encontro base de datos", error));
+
+const database = fetch("../data/database.json")
+  database.then((res) => res.json())
+  .then((res) => {
+    productosData = res;
+    res.forEach((producto) => {
+      const creadorElementos = creadorProducto(producto);
+      productosElementos.push(creadorElementos);
+      productor.appendChild(creadorElementos);
+    });
+  })
+  .catch((error) => console.error("No se encontro base de datos", error))
+  .finally(() => {
+    console.log("Promesa finalizada, espero q exitosamente.");
+  });
 
 
 function creadorProducto(producto) {
@@ -63,7 +79,7 @@ function filterProducts() {
   const checkedCategories = Array.from(checkboxes)
     .filter((check) => check.checked)
     .map((check) => check.id);
-  productosElement.forEach((productosElement, index) => {
+  productosElementos.forEach((productosElement, index) => {
     const product = productosData[index];
     const isInCheckedCategory =
       checkedCategories.length === 0 ||

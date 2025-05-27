@@ -1,0 +1,272 @@
+[
+  {
+    "nombre": "celular",
+    "categoria": "celular",
+    "cantidad": 5,
+    "precio": 290000,
+    "descripcion": "celular estandar",
+    "id": 1,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214996/WhatsApp_Image_2025-05-24_at_19.31.01_wnlmby.jpg"
+  },
+  {
+    "nombre": "celular",
+    "categoria": "celular",
+    "cantidad": 3,
+    "precio": 1000000,
+    "descripcion": "celular con estilo",
+    "id": 2,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214995/WhatsApp_Image_2025-05-24_at_19.31.01_1_mazgvt.jpg"
+  },
+  {
+    "nombre": "celular",
+    "categoria": "celular",
+    "cantidad": 6,
+    "precio": 500000,
+    "descripcion": "celular de excelente calidad",
+    "id": 3,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214995/WhatsApp_Image_2025-05-24_at_19.06.23_vdoalx.jpg"
+  },
+  {
+    "nombre": "celular",
+    "categoria": "celular",
+    "cantidad": 5,
+    "precio": 300000,
+    "descripcion": "celular con buena bateria",
+    "id": 4,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214995/WhatsApp_Image_2025-05-24_at_19.31.00_lorn7g.jpg"
+  },
+  {
+    "nombre": "celular",
+    "categoria": "celular",
+    "cantidad": 5,
+    "precio": 245000,
+    "descripcion": "celular economico",
+    "id": 5,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214972/WhatsApp_Image_2025-05-24_at_19.06.22_f5qq6r.jpg"
+  },
+  {
+    "nombre": "planta",
+    "categoria": "planta",
+    "cantidad": 5,
+    "precio": 7000,
+    "descripcion": "planta indoor",
+    "id": 6,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214958/WhatsApp_Image_2025-05-24_at_17.03.39_xpbfqm.jpg"
+  },
+  {
+    "nombre": "planta",
+    "categoria": "planta",
+    "cantidad": 5,
+    "precio": 10500,
+    "descripcion": "planta con colores vivos",
+    "id": 7,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214959/WhatsApp_Image_2025-05-24_at_17.20.51_pqyhah.jpg"
+  },
+  {
+    "nombre": "planta",
+    "categoria": "planta",
+    "cantidad": 5,
+    "precio": 5500,
+    "descripcion": "planta espanta ratones",
+    "id": 8,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214959/WhatsApp_Image_2025-05-24_at_17.14.59_xrqhng.jpg"
+  },
+  {
+    "nombre": "planta",
+    "categoria": "planta",
+    "cantidad": 5,
+    "precio": 3000,
+    "descripcion": "planta carnivora",
+    "id": 9,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214962/WhatsApp_Image_2025-05-24_at_18.46.58_2_bkjh2u.jpg"
+  },
+  {
+    "nombre": "planta",
+    "categoria": "planta",
+    "cantidad": 5,
+    "precio": 500,
+    "descripcion": "planta media muerta",
+    "id": 10,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214963/WhatsApp_Image_2025-05-24_at_18.46.58_3_aimyit.jpg"
+  },
+  {
+    "nombre": "cafe",
+    "categoria": "cafe",
+    "cantidad": 5,
+    "precio": 6990,
+    "descripcion": "cafe magico",
+    "id": 11,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214959/WhatsApp_Image_2025-05-24_at_17.14.58_jvhflm.jpg"
+  },
+  {
+    "nombre": "cafe",
+    "categoria": "cafe",
+    "cantidad": 5,
+    "precio": 15000,
+    "descripcion": "icafe ",
+    "id": 12,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214995/WhatsApp_Image_2025-05-24_at_19.08.53_p5zfhb.jpg"
+  },
+  {
+    "nombre": "cafe",
+    "categoria": "cafe",
+    "cantidad": 5,
+    "precio": 8500,
+    "descripcion": "cafe de colombia",
+    "id": 13,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214960/WhatsApp_Image_2025-05-24_at_17.20.59_xwt83j.jpg"
+  },
+  {
+    "nombre": "cafe",
+    "categoria": "cafe",
+    "cantidad": 5,
+    "precio": 12500,
+    "descripcion": "cafe de colombia pero mas colombiano",
+    "id": 14,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214958/WhatsApp_Image_2025-05-24_at_17.07.43_o4sdzn.jpg"
+  },
+  {
+    "nombre": "cafe",
+    "categoria": "cafe",
+    "cantidad": 5,
+    "precio": 9500,
+    "descripcion": "cafe de grano bien molido",
+    "id": 15,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214958/WhatsApp_Image_2025-05-24_at_17.09.19_t0kkjo.jpg"
+  },
+  {
+    "nombre": "Juego de mesa",
+    "categoria": "mesa",
+    "cantidad": 5,
+    "precio": 35500,
+    "descripcion": "piratas de mar muerto",
+    "id": 16,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214962/WhatsApp_Image_2025-05-24_at_18.46.58_1_lvtoaw.jpg"
+  },
+  {
+    "nombre": "Juego de mesa",
+    "categoria": "mesa",
+    "cantidad": 5,
+    "precio": 53500,
+    "descripcion": "gatitos en apuros",
+    "id": 17,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214963/WhatsApp_Image_2025-05-24_at_18.46.58_qydkuo.jpg"
+  },
+  {
+    "nombre": "Juego de mesa",
+    "categoria": "mesa",
+    "cantidad": 5,
+    "precio": 45000,
+    "descripcion": "colonizadores de lugares ya colonizados",
+    "id": 18,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214961/WhatsApp_Image_2025-05-24_at_18.46.57_udkdpl.jpg"
+  },
+  {
+    "nombre": "Juego de mesa",
+    "categoria": "mesa",
+    "cantidad": 5,
+    "precio": 35000,
+    "descripcion": "javier porter y los libros clonados",
+    "id": 19,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214958/WhatsApp_Image_2025-05-24_at_17.07.44_ccywnz.jpg"
+  },
+  {
+    "nombre": "Juego de mesa",
+    "categoria": "mesa",
+    "cantidad": 5,
+    "precio": 40000,
+    "descripcion": "son frutas?",
+    "id": 20,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214959/WhatsApp_Image_2025-05-24_at_17.10.24_oohosk.jpg"
+  },
+  {
+    "nombre": "polera",
+    "categoria": "polera",
+    "cantidad": 5,
+    "precio": 20000,
+    "descripcion": "polera chula",
+    "id": 21,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214964/WhatsApp_Image_2025-05-24_at_18.57.24_1_sdtex8.jpg"
+  },
+  {
+    "nombre": "polera",
+    "categoria": "polera",
+    "cantidad": 5,
+    "precio": 15000,
+    "descripcion": "polera bonita",
+    "id": 22,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214964/WhatsApp_Image_2025-05-24_at_18.57.24_1_sdtex8.jpg"
+  },
+  {
+    "nombre": "polera",
+    "categoria": "polera",
+    "cantidad": 5,
+    "precio": 10000,
+    "descripcion": "polera?",
+    "id": 23,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214965/WhatsApp_Image_2025-05-24_at_18.57.24_2_td0qnr.jpg"
+  },
+  {
+    "nombre": "polera",
+    "categoria": "polera",
+    "cantidad": 5,
+    "precio": 24000,
+    "descripcion": "polera de ejercicio",
+    "id": 24,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214965/WhatsApp_Image_2025-05-24_at_18.57.24_3_imhb1h.jpg"
+  },
+  {
+    "nombre": "polera",
+    "categoria": "polera",
+    "cantidad": 5,
+    "precio": 15000,
+    "descripcion": "polera para el frio",
+    "id": 25,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214966/WhatsApp_Image_2025-05-24_at_18.57.24_4_ffmqig.jpg"
+  },
+  {
+    "nombre": "vela",
+    "categoria": "vela",
+    "cantidad": 5,
+    "precio": 10000,
+    "descripcion": "vela aromatica olor mar",
+    "id": 26,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214996/WhatsApp_Image_2025-05-24_at_19.38.48_1_ld4bs6.jpg"
+  },
+  {
+    "nombre": "vela",
+    "categoria": "vela",
+    "cantidad": 5,
+    "precio": 6990,
+    "descripcion": "vela con 5000 lumens",
+    "id": 27,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214999/WhatsApp_Image_2025-05-24_at_19.38.48_4_kwp8er.jpg"
+  },
+  {
+    "nombre": "vela",
+    "categoria": "vela",
+    "cantidad": 5,
+    "precio": 6700,
+    "descripcion": "vela de larga duracion",
+    "id": 28,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748215000/WhatsApp_Image_2025-05-24_at_19.38.48_hi6jmj.jpg"
+  },
+  {
+    "nombre": "vela",
+    "categoria": "vela",
+    "cantidad": 5,
+    "precio": 5500,
+    "descripcion": "vela color extraño",
+    "id": 29,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214999/WhatsApp_Image_2025-05-24_at_19.38.48_2_mobunp.jpg"
+  },
+  {
+    "nombre": "vela",
+    "categoria": "vela",
+    "cantidad": 5,
+    "precio": 5000,
+    "descripcion": "vela olor hamburguesa",
+    "id": 30,
+    "img": "https://res.cloudinary.com/djaaurvxj/image/upload/v1748214999/WhatsApp_Image_2025-05-24_at_19.38.48_3_pzyp7s.jpg"
+  }
+]
