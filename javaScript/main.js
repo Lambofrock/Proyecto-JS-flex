@@ -183,7 +183,8 @@ iniciar.addEventListener("click", () => {
 setTimeout(() => {
     Toastify({
   style: {
-    background: "red",
+    background: "rgb(146, 20, 12)",
+  
   },
   onClick:function (){
 UPop.classList.add("open")
@@ -193,3 +194,4 @@ duration: 4000
 
 }).showToast();
 }, 2000);
+

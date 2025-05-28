@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>carrito</title>
-  </head>
-  <body>
-    <header>
-      <a href="../index.html">Home</a>
-      <a href="productos.html">productos</a>
-      <a href="carrito.html">carrito</a>
-    </header>
-    <main>
-        <button id="tarea">consola</button>
-    </main>
-<footer>
-    <p>gracias por visitarnos</p>
-</footer>
-    <script src="/javaScript/carrito.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>carrito</title>
+  <link rel="stylesheet" href="../Css/main.css">
+</head>
+
+<body>
+  <header class="banner">
+    <div class="head-container">
+      <a class="link-header" href="../index.html">Home</a>
+      <a class="link-header" href="./productos.html">productos</a>
+      <a class="link-header" href="./carrito.html">carrito</a>
+    </div>
+  </header>
+  <main>
+    <div>
+      <h1 >Tu carrito</h1>
+    </div>
+    <div class="cart-container" id="productor">
+      <!-- <div class="caja-cart">
+        <img class="img-cart" src="${producto.img}" alt="">
+        <p class="text-cart">${producto.descripcion}<br>
+          $ ${producto.precio.toLocaleString()}</p>
+        <button class="btn-cart">borrar</button>
+      </div> -->
+    </div>
+  </main>
+  <script src="/javaScript/carrito.js"></script>
+</body>
+
 </html>
